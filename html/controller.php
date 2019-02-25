@@ -83,3 +83,9 @@ function pagenotfound()
     require('pagenotfound.php');
 }
 
+function contactpage()
+{
+
+    require('contactpage.php');
+}
+

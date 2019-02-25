@@ -7,6 +7,7 @@ auteur:Thibaud Jacquelin
 		<ul>
 			<li><a href="index.php" title="Accueil">Accueil</a></li>
 			<li><a href="index.php?action=profilpage" title="Mon compte">Mon compte</a></li>
+			<li><a href="index.php?action=contactpage" title="Contact">contact</a></li>
 		</ul>
 
 	</nav>

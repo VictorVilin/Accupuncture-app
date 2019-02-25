@@ -9,7 +9,6 @@ session_start();
 require('private/security/anti_SQL_injection.php');
 require('private/security/checksession.php');
 
-
 //initialisation de smarty
 require("tpl/Smarty.class.php");
 
@@ -77,6 +76,10 @@ if (isset($_GET['action']))
 	elseif ($_GET['action'] == 'profilupdate') {
 
         profilupdate();
+ }
+	elseif ($_GET['action'] == 'contactpage') {
+
+        contactpage();
 
     }
 	else{
