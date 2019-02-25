@@ -186,3 +186,10 @@ a .nomdusite:hover
 	font-style: normal;
 	font-weight: bold;
 }
+
+.text-area
+{
+	min-height:10em;
+	min-width:90%;
+
+}
