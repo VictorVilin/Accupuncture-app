@@ -9,10 +9,11 @@ Thibaud JACQUELIN, 03-03-2019, rajout du catch pour tuer les messages d'erreur.
 $dbName = "wikipuncture-compte";
 $user = "root";
 $password = "tp";
+$charset = "UTF8";
 
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname='.$dbName, $user, $password);
+	$bdd = new PDO('mysql:host=localhost;charset='.$charset.';dbname='.$dbName, $user, $password);
 }
 catch (Exception $e)
 {
