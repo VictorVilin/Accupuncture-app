@@ -12,12 +12,3 @@ if(isset($_SESSION['email']))
 	}
 }
 
-
-if(isset($_SESSION['Prenom']))
-{
-	if(filter_var($_SESSION['Prenom'], FILTER_VALIDATE_EMAIL) == false)
-	{
-		unset($_SESSION['Prenom']);
-	}
-}
-
