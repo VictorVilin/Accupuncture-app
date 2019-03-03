@@ -1,9 +1,21 @@
 <!-- permet de se connecter à la base de donnée des compte utilisateur
 auteur:Thibaud Jacquelin
 09.02.2019
+modification:
+Thibaud JACQUELIN, 03-03-2019, rajout du catch pour tuer les messages d'erreur.
 -->
 
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=wikipuncture-compte;charset=utf8', 'root', 'tp');
+$dbName = "wikipuncture-compte";
+$user = "root";
+$password = "tp";
 
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname='.$dbName, $user, $password);
+}
+catch (Exception $e)
+{
+	die('Erreur : '.$e->getMessage());
+}
 
