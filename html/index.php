@@ -7,6 +7,7 @@ Thibaud Jacquelin, 24-02-2018, rajout du plugin smarty
 <?php
 session_start();
 require('private/security/anti_SQL_injection.php');
+require('private/security/checkvariabletype.php');
 require('private/security/checksession.php');
 
 //initialisation de smarty
