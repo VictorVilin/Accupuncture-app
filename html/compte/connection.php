@@ -1,6 +1,8 @@
 <!-- tentative de connection à un compte
 auteur:Thibaud Jacquelin
 09.02.2019
+modification:
+Thibaud JACQUELIN, 03-03-2019, modifications mineurs
 -->
 
 <?php
@@ -19,6 +21,7 @@ if($donnees = $req->fetch())
 		$req2->execute(array('email' => $email));
 		$profil=$req2->fetch();
 		$_SESSION['prenom']=$profil['prenom'];
+		$_SESSION['nom']=$profil['nom'];
 		$_SESSION['email']=$profil['email'];
 		$_SESSION['password']=$profil['password'];
 		echo "<script type='text/javascript'>document.location.replace('index.php');</script>";
