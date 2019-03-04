@@ -26,11 +26,12 @@ auteur:Thibaud Jacquelin
 
 		<form action="index.php?action=chat" method="post">
 		<p>
-		<label for="message">Message</label> :  <input type="text" name="message" id="message" />
-		<input type="submit" value="Envoyer" />
+		<label for="message">Message:</label><input type="text" name="message" id="message"/>
+		<input type="submit" value="Envoyer" id="chatsubmitbutton"/>
 		</p>
-	    </form>
+	    	</form>
 
 <?php
 }
-echo ' </div>';
+?>
+</div>
