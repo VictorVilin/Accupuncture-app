@@ -13,24 +13,22 @@ if(isset($_SESSION['prenom']))
 	echo 'vous etes connecté sur le profil de ';	
 	echo $_SESSION['prenom'];
 	?>
-	<input type=button onclick=window.location.href='index.php?action=profilpage';  value="Mon compte" />
-	<input type=button onclick=window.location.href='index.php?action=deconnection';  value="Se déconnecter" />
+	<input type=button id="accountbutton" onclick=window.location.href='index.php?action=profilpage';  value="Mon compte" />
+	<input type=button id="disconnectbutton" onclick=window.location.href='index.php?action=deconnection';  value="Se déconnecter" />
 	<?php
 }else{
 	?>
-	<form method=post action="index.php?action=connection">
+	<form method=post action="index.php?action=connection" id="connectionform">
 	<fieldset>
 
-	  <label for="email">Identifiant :</label>
-	  
-	  <p><input type="email" name="email" id="email" placeholder="email" autocomplete="email"/></p>
+	  <label for="email">identifiant:</label>
+	  <input type="email" name="email" id="email" placeholder="email" autocomplete="email"/>
 
-	  <label for="password">Mot de Passe :</label>
-	  <p><input type="password" name="password" id="password" placeholder="mot de passe"/></p>
+	  <label for="password">mdp:</label>
+	  <input type="password" name="password" id="password" placeholder="mot de passe"/>
 
-
-	  <input type="submit" name="connexion" value="connexion"/>
-	  <a href="index.php?action=inscriptionpage" title="Inscrivez vous ici !">Inscription</a>
+	  <input type="submit" name="connexion" id="submitbuttonconnection" value="connexion"/>
+	  <a href="index.php?action=inscriptionpage" title="inscrivez vous ici !">inscription</a>
 	</fieldset>
 	</form>
 <?php
