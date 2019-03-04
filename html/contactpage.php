@@ -10,10 +10,9 @@ auteur:Thibaud Jacquelin
 	<form method=post action="index.php?action=contact">
 		<fieldset>
 		<ul>
-		  <li><label for="email">email:</label>
-		  <input type="email" name="email" id="email" placeholder="email" autocomplete="email"/></li>
-
-		  <li><label for="message">message:</label></li>
+		  <li><label for="email">email :</label></li>
+          <input type="email" name="email" id="email" placeholder="email" autocomplete=" email"/>
+		  <li><label for="message">message :</label></li>
 		  <textarea class='text-area'  name="message" id="message" placeholder=" Entrez votre suggestion ici"/></textarea>
 		  <li><input type="submit" name="envoyer" value="envoyer"/></li>
 		</ul>
