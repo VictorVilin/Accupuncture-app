@@ -16,9 +16,11 @@ echo "! Que voulez vous rechercher aujourd'hui?</h2>";
 
     <form method=post action="index.php?action=searchresult" id="recherche">
     <div class=searchmainbar>
+      <p>
       <label for="recherche">Recherche :</label>
       <input type="search" name="recherche" id="recherche" placeholder="pathologie..." autofocus/>
 	<input type="submit" name="rechercher" value="rechercher"/>      
+      </p>
 	</div>
 	<fieldset>
 	<label>filtrer par pathologies:</label>
