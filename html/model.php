@@ -10,12 +10,13 @@ auteur:Thibaud Jacquelin
   <title>Wikipuncture</title>
   <link rel="stylesheet" href="CSS/style.css">
 </head>
+<header>
     <?php include("header.php"); ?>
+</header>
     <body>
 	<div class=side>
 	<?php include("compte/connectionbar.php"); ?>
 	<?php include("menu.php"); ?>
 	<?php include("chat/chatbar.php"); ?>
 	</div>
-    </body>
-</html>
+

@@ -2,7 +2,8 @@
 auteur:Thibaud Jacquelin
 09.02.2019
 modification:
-Thibaud Jacquelin, 24-02-2018, rajout du plugin smarty
+Thibaud Jacquelin, 24-02-2019, rajout du plugin smarty
+Thibaud JACQUELIN, 04-03-2019, rajout des regles de sécurité
 -->
 <?php
 session_start();
@@ -94,7 +95,9 @@ if (isset($_GET['action']))
     accueilpage();
 
 }
-echo '</div>';
+echo '</div></body>';
 
 include("footer.php");
+
+echo '</html>';
 
