@@ -2,8 +2,12 @@
 auteur:Thibaud Jacquelin
 09.02.2019
 
-modification:thibaud jacquelin, 23-02-2019: ajout de couleur, dimensionnement des boxes, opacité, background...
+modification:
+thibaud jacquelin, 23-02-2019: ajout de couleur, dimensionnement des boxes, opacité, background...
+thibaud JACQUELIN, 04-03-2019; modification de l'affichage de la barre de recherce
 */
+
+
 
 
 body
@@ -192,4 +196,9 @@ a .nomdusite:hover
 	min-height:10em;
 	min-width:90%;
 
+}
+
+.searchmainbar
+{
+	margin-bottom:30px;
 }
