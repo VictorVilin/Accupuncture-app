@@ -57,7 +57,7 @@ echo '<div class=content>';
 
 		}
 		
-		echo '<strong>'.&i.'</strong> resultats avec <strong>'.$resultat.'</strong>';
+		echo '<strong>'.$i.'</strong> resultats avec <strong>'.$recherche.'</strong>';
 
 		$tpl = new Smarty();
 
