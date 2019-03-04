@@ -1,0 +1,20 @@
+<!-- page d'accueil, affiche le moteur de recherche
+auteur:Thibaud Jacquelin
+09.02.2019
+-->
+
+<?php
+$dbName = "contact";
+$user = "root";
+$password = "tp";
+$charset = "UTF8";
+
+try
+{
+	$bdd = new PDO('mysql:host=localhost;charset='.$charset.';dbname='.$dbName, $user, $password);
+}
+catch (Exception $e)
+{
+	die('Erreur : '.$e->getMessage());
+}
+
