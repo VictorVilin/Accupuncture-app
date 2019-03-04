@@ -22,10 +22,12 @@ if(isset($_SESSION['prenom']))
 	<fieldset>
 
 	  <label for="email">Identifiant :</label>
-	  <input type="email" name="email" id="email" placeholder="email" autocomplete="email"/>
+	  
+	  <p><input type="email" name="email" id="email" placeholder="email" autocomplete="email"/></p>
 
 	  <label for="password">Mot de Passe :</label>
-	  <input type="password" name="password" id="password" placeholder="mot de passe"/>
+	  <p><input type="password" name="password" id="password" placeholder="mot de passe"/></p>
+
 
 	  <input type="submit" name="connexion" value="connexion"/>
 	  <a href="index.php?action=inscriptionpage" title="Inscrivez vous ici !">Inscription</a>
