@@ -21,14 +21,14 @@ if(isset($_SESSION['prenom']))
 	<form method=post action="index.php?action=connection" id="connectionform">
 	<fieldset>
 
-	  <label for="email">identifiant:</label>
+	  <label for="email">Identifiant :</label>
 	  <input type="email" name="email" id="email" placeholder="email" autocomplete="email"/>
 
-	  <label for="password">mdp:</label>
+	  <label for="password">Mot de passe :</label>
 	  <input type="password" name="password" id="password" placeholder="mot de passe"/>
 
 	  <input type="submit" name="connexion" id="submitbuttonconnection" value="connexion"/>
-	  <a href="index.php?action=inscriptionpage" title="inscrivez vous ici !">inscription</a>
+	  <a href="index.php?action=inscriptionpage" title="inscrivez vous ici !"> Inscription </a>
 	</fieldset>
 	</form>
 <?php
