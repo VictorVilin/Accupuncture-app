@@ -56,6 +56,8 @@ echo '<div class=content>';
 			$i++;
 
 		}
+		
+		echo '<strong>'.&i.'</strong> resultats avec <strong>'.$resultat.'</strong>';
 
 		$tpl = new Smarty();
 
