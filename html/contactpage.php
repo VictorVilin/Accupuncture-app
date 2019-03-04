@@ -14,20 +14,20 @@ auteur:Thibaud Jacquelin
 		  <input type="email" name="email" id="email" placeholder="email" autocomplete="email"/></li>
 
 		  <li><label for="message">message:</label></li>
-		  <textarea class='text-area'  name="message" id="message" placeholder="Entrez votre suggestion ici"/></textarea>
+		  <textarea class='text-area'  name="message" id="message" placeholder=" Entrez votre suggestion ici"/></textarea>
 		  <li><input type="submit" name="envoyer" value="envoyer"/></li>
 		</ul>
 		</fieldset>
 		</form>
 
-	<h3> Par courrier postal: </h3>
+	<h3> Par courrier postal : </h3>
 	<p>
 		<p>CPE Lyon</p>
 		<p> Bâtiment Hubert Curien, Domaine Scientifique de la Doua</p>
-		<p> 43 Boulevard du 11 Novembre 1918, 69100 Villeurbanne</p>
+		<p> 43 Boulevard du 11 Novembre 1918, 69100 Villeurbanne, France</p>
 	</p>
-	<h3> Par telephone: </h3>
-	<p> 0478000000 </p>
+	<h3> Par telephone : </h3>
+	<p>  +334 78 00 00 00  </p>
 		
 
 
