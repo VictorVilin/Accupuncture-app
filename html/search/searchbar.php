@@ -16,7 +16,7 @@ echo "! Que voulez vous rechercher aujourd'hui?</h2>";
 
     <form method=post action="index.php?action=searchresult" id="recherche">
     <div class=searchmainbar>
-      <label for="recherche">recherche:</label>
+      <label for="recherche">Recherche :</label>
       <input type="search" name="recherche" id="recherche" placeholder="pathologie..." autofocus/>
 	<input type="submit" name="rechercher" value="rechercher"/>      
 	</div>
