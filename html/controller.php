@@ -86,6 +86,11 @@ function pagenotfound()
 function contactpage()
 {
 
-    require('contactpage.php');
+    require('contact/contactpage.php');
+}
+
+function information()
+{
+	require('information.php');
 }
 
