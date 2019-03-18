@@ -3,6 +3,7 @@ auteur:Thibaud Jacquelin
 09.02.2019
 modification:
 Thibaud JACQUELIN, 04-03-2019, correction des erreurs d'accessibilité AAA du aux balises label.
+Victor VILIN, 18 03 2019, Correction de syntaxe 
 -->
 
 <?php echo "<div class=content><h2>Bienvenue ";
@@ -10,7 +11,7 @@ if(isset($_SESSION['prenom']))
 {
 	echo $_SESSION['prenom'].' ';
 }
-echo "! Que voulez vous rechercher aujourd'hui?</h2>"; 
+echo "! Que voulez vous rechercher aujourd'hui ?</h2>"; 
 ?>
 
 
@@ -18,12 +19,12 @@ echo "! Que voulez vous rechercher aujourd'hui?</h2>";
 
     <form method=post action="index.php?action=searchresult" id="rechercheform">
     <div class=searchmainbar>
-      <label for="recherche">Recherche:</label>
+      <label for="recherche">Recherche :</label>
       <input type="search" name="recherche" id="recherche" placeholder="pathologie..." autofocus/>
 	<input type="submit" name="rechercher" id="submitbutton" value="rechercher"/>      
 	</div>
 	<fieldset>
-	<legend>filtrer par pathologies:</legend>
+	<legend>Pathologies :</legend>
 	<details>
 	<ul>
 	  <li><input type="checkbox" name="meridien" id="meridien"><label for="meridien"> méridien</label></li>
@@ -35,7 +36,7 @@ echo "! Que voulez vous rechercher aujourd'hui?</h2>";
 	</details>
       </fieldset>
       <fieldset>
-	<legend>filtrer par meridiens:</legend>
+	<legend>Meridiens :</legend>
 	<details>
 	<ul>
 	  <li><input type="checkbox" name="-QM" id="-QM"><label for="-QM">Yin Qiao Mai</label></li>
@@ -62,7 +63,7 @@ echo "! Que voulez vous rechercher aujourd'hui?</h2>";
 	</details>
       </fieldset>
       <fieldset>
-	<legend>filtrer par caracteristiques:</legend>
+	<legend>Caracteristiques :</legend>
 	<details>
 	<ul>
 	  <ul>
