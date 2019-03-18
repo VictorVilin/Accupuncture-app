@@ -1,0 +1,43 @@
+/* feuille de style de toutes les pages du site
+auteur:Paul Martinez
+18-03-2019
+
+modification:paul martinez 18-03-2019: ajout de couleur, dimensionnement des boxes, opacité, background...
+*/
+
+body {
+	background-color : #fff;
+	font-family:Serif;
+}
+
+#page{
+	margin:0;
+	border:none;
+}
+
+#banner, #menuright, #footer{
+  display :none;
+}
+
+blockquote, ul, ol {
+  page-break-inside: avoid;
+}
+
+
+h1, h2, h3, caption {
+  page-break-after: avoid;
+}
+
+.searchmainbar {
+	display : none;
+}
+
+.side, .chat, .userbar, .menuprincipal{
+	display:none;
+}
+
+.content {
+	width:130%; 
+}
+	
+	
