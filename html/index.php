@@ -99,8 +99,9 @@ if (isset($_GET['action']))
     accueilpage();
 
 }
-echo '</div></body>';
+echo '</div>';
 
 include("footer.php");
 
-echo '</html>';
+echo '</body></html>';
+
