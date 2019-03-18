@@ -1,6 +1,7 @@
 <!-- charge les résultat de la barre de recherche
 auteur:Thibaud Jacquelin
 09.02.2019
+EDIT : Victor VILIN : ajout de la derniere condition pour le cas où resultat est vide 
 -->
 
 <?php
@@ -10,8 +11,10 @@ $requete='%'.$recherche.'%';
 
 $meridiens=['-QM','-WM','+QM','+WM','C','ChM','DaiM','DM','E','F','GI','IG','MC','P','R','RM','Rte','TR','V','VB'];
 $meridiensasked=[];
+$meridiensstring="";
 foreach ($meridiens as &$meridien)
 {
+	$meridiensstring = $meridiensstring . ",'" . $meridien . "'";
 	$meridiensasked = (isset($_POST[$meridien])) ? $meridiensasked=array_merge($meridiensasked, [$meridien]) : $meridiensasked;
 }
 
@@ -29,11 +32,16 @@ foreach ($caracteristiques as &$caracteristique)
 	$caracteristiquesasked = (isset($_POST[$caracteristique])) ? $caracteristiquesasked=array_merge($caracteristiquesasked, [$caracteristique]) : $caracteristiquesasked;
 }
 
-
-$resultat = $bdd->prepare('SELECT * FROM patho WHERE description LIKE :recherche');
+$resultat = $bdd->prepare("
+                            SELECT *
+                            FROM `patho` 
+                                INNER JOIN meridien ON meridien.code = patho.mer
+                                    WHERE description LIKE :recherche
+                                    HAVING  mer IN (''" . $meridiensstring . ")
+                        ");
 $resultat->execute(array('recherche'=>$requete));
-$resultatcopy=$resultat;
-if(!$resultatcopy=$resultat->fetch())
+
+if(empty($resultat))
 {
 	$resultat=FALSE;
 }
