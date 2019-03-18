@@ -3,7 +3,6 @@ auteur:Thibaud Jacquelin
 09.02.2019
 modification:
 Thibaud JACQUELIN, 04-03-2019, correction des erreurs d'accessibilité AAA du aux balises label.
-Victor VILIN, 18 03 2019, Correction de syntaxe 
 -->
 
 <?php echo "<div class=content><h2>Bienvenue ";
@@ -11,7 +10,7 @@ if(isset($_SESSION['prenom']))
 {
 	echo $_SESSION['prenom'].' ';
 }
-echo "! Que voulez vous rechercher aujourd'hui ?</h2>"; 
+echo "! Que voulez vous rechercher aujourd'hui?</h2>"; 
 ?>
 
 
@@ -19,24 +18,24 @@ echo "! Que voulez vous rechercher aujourd'hui ?</h2>";
 
     <form method=post action="index.php?action=searchresult" id="rechercheform">
     <div class=searchmainbar>
-      <label for="recherche">Recherche :</label>
+      <label for="recherche">Recherche:</label>
       <input type="search" name="recherche" id="recherche" placeholder="pathologie..." autofocus/>
 	<input type="submit" name="rechercher" id="submitbutton" value="rechercher"/>      
 	</div>
 	<fieldset>
-	<legend>Pathologies :</legend>
+	<legend>filtrer par pathologies:</legend>
 	<details>
 	<ul>
 	  <li><input type="checkbox" name="meridien" id="meridien"><label for="meridien"> méridien</label></li>
-	  <li><input type="checkbox" name="organe-viscere" id=organe-viscere"><label for="organe-viscere">organe-viscere</label></li>
+	  <li><input type="checkbox" name="organe-viscere" id="organe-viscere"><label for="organe-viscere">organe-viscere</label></li>
 	  <li><input type="checkbox" name="tendino-musculaire" id="tendino-musculaire"><label for="tendino-musculaire">tendino-musculaire</label></li>
 	  <li><input type="checkbox" name="branches" id="branches"><label for="branches">branches</label></li>
-	  <li><input type="checkbox" name="merveilleux vaisseaux" id="merveilleux vaisseaux"><label for="merveilleux vaisseaux">merveilleux vaisseaux</label></li>
+	  <li><input type="checkbox" name="merveilleux vaisseaux" id="merveilleux-vaisseaux"><label for="merveilleux-vaisseaux">merveilleux vaisseaux</label></li>
 	</ul>
 	</details>
       </fieldset>
       <fieldset>
-	<legend>Meridiens :</legend>
+	<legend>filtrer par meridiens:</legend>
 	<details>
 	<ul>
 	  <li><input type="checkbox" name="-QM" id="-QM"><label for="-QM">Yin Qiao Mai</label></li>
@@ -63,10 +62,9 @@ echo "! Que voulez vous rechercher aujourd'hui ?</h2>";
 	</details>
       </fieldset>
       <fieldset>
-	<legend>Caracteristiques :</legend>
+	<legend>filtrer par caracteristiques:</legend>
 	<details>
 	<ul>
-	  <ul>
 	    <li><input type="checkbox" name="plein" id="plein"><label for="plein">plein</label></li>
 	    <li><input type="checkbox" name="vide" id="vide"><label for="vide">vide</label></li>
 	  </ul>
@@ -78,7 +76,6 @@ echo "! Que voulez vous rechercher aujourd'hui ?</h2>";
 	    <li><input type="checkbox" name="interne" id="interne"><label for="interne">interne</label></li>
 	    <li><input type="checkbox" name="externe" id="externe"><label for="externe">externe</label></li>
 	  </ul>
-	</ul>
 	</details>
       </fieldset>
     </form>
