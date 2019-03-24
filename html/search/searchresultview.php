@@ -64,12 +64,12 @@ echo '<div class=content>';
 				$i++;
 			}
 			else{	//ajout de plusiers symptomes et/ou keywords
-				if($donnees['desc'] != $list_resultat[$i-1]['desc']){
+				if(!in_array($donnees['desc'], $list_resultat[$i-1]['desc'])){
 					array_push($list_resultat[$i-1]['desc'], $donnees['desc']);
 				}
-				if($donnees['name'] != $list_resultat[$i-1]['name']){
+				if(!in_array($donnees['name'] , $list_resultat[$i-1]['name'])){
 					array_push($list_resultat[$i-1]['name'], $donnees['name']);
-				}					
+				}				
 			}
 		}
 
