@@ -57,6 +57,7 @@ echo '<div class=content>';
 				$list_resultat[$i]['idP'] = $donnees['idP'];
 				$list_resultat[$i]['type'] = $donnees['type'];
 				$list_resultat[$i]['nom'] = $donnees['nom'];
+				$list_resultat[$i]['mer'] = $donnees['mer'];
 				$list_resultat[$i]['desc'] = array();//desc c'est les symptomes
 				$list_resultat[$i]['name'] = array();//name c'est les keywords
 				array_push($list_resultat[$i]['desc'], $donnees['desc']);
