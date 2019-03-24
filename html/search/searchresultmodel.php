@@ -2,6 +2,7 @@
 auteur:Thibaud Jacquelin
 09.02.2019
 EDIT : Victor VILIN : ajout de la derniere condition pour le cas où resultat est vide 
+Modifie par Angel Calvo le 23.03.2019
 -->
 
 <?php
@@ -33,11 +34,18 @@ foreach ($caracteristiques as &$caracteristique)
 }
 
 $resultat = $bdd->prepare("
-                            SELECT *
-                            FROM `patho` 
-                                INNER JOIN meridien ON meridien.code = patho.mer
-                                    WHERE description LIKE :recherche
-                                    HAVING  mer IN (''" . $meridiensstring . ")
+				SELECT description,type,mer,patho.idP,meridien.nom,symptome.desc, keywords.name
+				FROM `patho` 
+				
+				INNER JOIN meridien ON patho.mer = meridien.code
+				INNER JOIN symptPatho ON patho.idP = symptPatho.idP
+				INNER JOIN symptome ON symptPatho.idS = symptome.idS
+				INNER JOIN keySympt ON symptome.idS = keySympt.idS
+				INNER JOIN keywords ON keySympt.idK = keywords.idK
+
+				WHERE description LIKE :recherche
+			/*Il manque le filtrage*/
+				ORDER BY patho.idP ASC
                         ");
 $resultat->execute(array('recherche'=>$requete));
 
@@ -45,4 +53,5 @@ if(empty($resultat))
 {
 	$resultat=FALSE;
 }
+
 
